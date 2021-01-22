@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "heartoflove", "heartoflove\heartoflove.vbproj", "{F176E5DA-BECF-4B8B-9931-9BE11773E9EA}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "comix", "comix\comix.vbproj", "{F5E87FEE-AD4C-4A73-B2F2-80ECBAEE6308}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F176E5DA-BECF-4B8B-9931-9BE11773E9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F176E5DA-BECF-4B8B-9931-9BE11773E9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F176E5DA-BECF-4B8B-9931-9BE11773E9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E87FEE-AD4C-4A73-B2F2-80ECBAEE6308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E87FEE-AD4C-4A73-B2F2-80ECBAEE6308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E87FEE-AD4C-4A73-B2F2-80ECBAEE6308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E87FEE-AD4C-4A73-B2F2-80ECBAEE6308}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
