@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Laws";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="page-wrapper">
+
+    <div class="row">
+        <div class="col-sm-6">
+            
+             <div>
+                <img src="\Audio\Books\HeartOfLove\album.jpg" style="width:300px;height:300px;" alt="album" >
+
+            </div>
+            
+            <div>
+
+                <a href="\PDF\Books\HeartOfLove\HeartOfLove.pdf" target="_blank">Click to Open PDF </a>
+            </div>
+
+            <p></p>
+
+            @try
+            {
+
+                foreach (MvcRichard.Models.DocumentModel order
+                   in (List<MvcRichard.Models.DocumentModel>)ViewData["orderData"])
+                {
+
+                <div>
+                    <div>
+                        @order.ShortName
+                    </div>
+                    <div>
+                        <audio controls>
+
+                            <source src="@order.PathName" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                }
+            }
+            catch
+            {
+            }
+        </div>
+        <div class="col-sm-6">
+            <div>
+                <object data="\PDF\Books\HeartOfLove\HeartOfLove.pdf" width="700" height="800" type="application/pdf">
+                    alt : <a href="\PDF\Books\HeartOfLove\HeartOfLove.pdf">You are the universe</a>
+                </object>
+            </div>
+        </div>
+    </div>
+</div>
