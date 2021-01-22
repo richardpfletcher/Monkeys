@@ -1,31 +1,66 @@
-﻿@Code
-    ViewData("Title") = "Home Page"
-End Code
+﻿<div class="container">
+    <a href="#demo2020" data-toggle="collapse"><span class=”icon”>Books Menu 2020 </span></a>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div id="demo2020" class="collapse">
+        <ul>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Indian Mystics">Heart Of Love - Indian Mystics</a>
+            </li>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Sufi">Heart Of Love - Sufi's </a>
+            </li>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Islam">Heart Of Love-Islam  </a>
+            </li>
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Jewish">Heart Of Love-Jewish  </a>
+            </li>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Western">Heart Of Love-Western,Middle East  </a>
+            </li>
+
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Hindu">Heart Of Love-Hindu   </a>
+            </li>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Sikh">Heart Of Love-Sikh Gurus   </a>
+            </li>
+
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Taoist">Heart Of Love-Taoist    </a>
+            </li>
+
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Jainism">Heart Of Love-Jainism    </a>
+            </li>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Buddhist ">Heart Of Love-Buddhist     </a>
+            </li>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Science ">Heart Of Love-Science     </a>
+            </li>
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Current ">Heart Of Love-Current     </a>
+            </li>
+
+
+            <li>
+                <a href="/Books/HeartOfLove?chapter=Indigenous ">Heart Of Love-Indigenous     </a>
+            </li>
+
+           
+        </ul>
     </div>
 </div>

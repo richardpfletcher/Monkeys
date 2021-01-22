@@ -338,3 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Ignoring directories
+# Both the directory itself and its contents will be ignored.
+mp4/
+audio/
+pdf/
