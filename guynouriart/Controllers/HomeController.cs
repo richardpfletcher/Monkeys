@@ -4,17 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-
-namespace comix.Controllers
+namespace guynouriart.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(string chapter)
+        public ActionResult Index()
         {
-            
-            
-            return View();
-
             return View();
         }
 
