@@ -1,74 +1,65 @@
 ﻿
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<div>
-    <img src="\Audio\Books\HeartOfLove\album.jpg" style="width:300px;height:300px;" alt="album">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<div id="divone">
+
+    @*<select name="dowList" onchange="GetTopic();" id="dowList">
+            @{string[] AgeRagne = new string[] { "Indian Mystics", "Sufi", "Islam", "Jewish", "Western", "Hindu", "Sikh", "Taoist", "Jainism", "Buddhist", "Science", "Current", "Indigenous" };}
+            @foreach (var dow in AgeRagne)
+            {
+                <option value="@dow">@dow</option>
+            }
+        </select>*@
 
 </div>
 
-<div class="container">
-    @*<a href="#demo2020" data-toggle="collapse"><span class=”icon”>Books Menu 2020 </span></a>*@
 
-        @*<div id="demo2020" class="collapse">*@
-        <div id="demo2020" >
-            <ul>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Indian Mystics">Heart Of Love - Indian Mystics</a>
-                </li>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Sufi">Heart Of Love - Sufi's </a>
-                </li>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Islam">Heart Of Love-Islam  </a>
-                </li>
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Jewish">Heart Of Love-Jewish  </a>
-                </li>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Western">Heart Of Love-Western,Middle East  </a>
-                </li>
+@*@Html.DropDownList("ethnicCode", (IEnumerable<SelectListItem>)ViewData["ethnicData"], new { @style = "width:200px;", @onchange = "GetTopic();" })*@
 
 
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Hindu">Heart Of Love-Hindu   </a>
-                </li>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Sikh">Heart Of Love-Sikh Gurus   </a>
-                </li>
-
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Taoist">Heart Of Love-Taoist    </a>
-                </li>
-
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Jainism">Heart Of Love-Jainism    </a>
-                </li>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Buddhist ">Heart Of Love-Buddhist     </a>
-                </li>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Science ">Heart Of Love-Science     </a>
-                </li>
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Current ">Heart Of Love-Current     </a>
-                </li>
-
-
-                <li>
-                    <a href="/Books/HeartOfLove?chapter=Indigenous ">Heart Of Love-Indigenous     </a>
-                </li>
+@Html.Partial("SearchView")
 
 
 
-            </ul>
-        </div>
-    </div>
+
+<script language="javascript" type="text/javascript">
+    function GetTopic() {
+
+        var e = document.getElementById("dowList");
+        var value = e.options[e.selectedIndex].value;
+        var text = e.options[e.selectedIndex].text;
+
+
+        //var x = document.getElementById("divone");
+        //x.style.display = "none";
+
+
+
+        $.ajax({
+            url: "/Home/Index",
+            data: { chapter: value },
+            //cache: true,
+            dataType: "html",
+            success: function (result) {
+                var domElement = $(result); // create element from html
+                $("#centerdivResults").empty().append(domElement); // append to end of list
+
+            }
+
+        });
+
+
+        return;
+
+    }
+</script>
+
+

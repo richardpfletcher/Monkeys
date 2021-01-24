@@ -1,0 +1,114 @@
+﻿<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<div id="centerdivResults">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - Heart Of Love</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Comments", "Comments", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        @*<select name="dowList" onchange="GetTopic();" id="dowList">
+                @{string[] AgeRagne = new string[] { "Please select one", "Indian Mystics", "Sufi", "Islam", "Jewish", "Western", "Hindu", "Sikh", "Taoist", "Jainism", "Buddhist", "Science", "Current", "Indigenous" };}
+                @foreach (var dow in AgeRagne)
+                {
+                    <option value="@dow">@dow</option>
+                }
+            </select>*@
+
+       
+        <div class="page-wrapper">
+
+            <div class="row">
+                <div class="col-sm-2">
+                   
+                </div>  
+
+                <div class="col-sm-4">
+
+                    <div>
+            <img src="\Audio\Books\HeartOfLove\album.jpg" style="width:300px;height:300px;" alt="album">
+
+        </div>
+                    <br /><br /><br />
+                    @Html.DropDownList("dowList", (IEnumerable<SelectListItem>)ViewData["ethnicData"], new { @style = "width:200px;", @onchange = "GetTopic();" })
+
+
+
+
+                    <div>
+
+                        <a href="\PDF\Books\HeartOfLove\HeartOfLove.pdf" target="_blank">View document </a>
+                    </div>
+
+                    <p></p>
+
+                    @try
+                    {
+
+                        foreach (MvcRichard.Models.DocumentModel order
+                           in (List<MvcRichard.Models.DocumentModel>)ViewData["orderData"])
+                        {
+
+                            <div>
+                                <div>
+                                    @order.ShortName
+                                </div>
+                                <div>
+                                    <audio controls>
+
+                                        <source src="@order.PathName" type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        }
+                    }
+                    catch
+                    {
+                    }
+                </div>
+                        <div class="col-sm-6">
+                            <div>
+                                <object data="\PDF\Books\HeartOfLove\HeartOfLove.pdf" width="700" height="800" type="application/pdf">
+                                    alt : <a href="\PDF\Books\HeartOfLove\HeartOfLove.pdf">Heart Of Love</a>
+                                </object>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+     
+</div>
+

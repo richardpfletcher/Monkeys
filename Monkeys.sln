@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "whatscooking", "whatscookin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "heartoflove", "heartoflove\heartoflove.csproj", "{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "timetocook.today", "timetocook.today\timetocook.today.csproj", "{414F3BBD-8F4A-4219-BF2F-FB78B837C998}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414F3BBD-8F4A-4219-BF2F-FB78B837C998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414F3BBD-8F4A-4219-BF2F-FB78B837C998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414F3BBD-8F4A-4219-BF2F-FB78B837C998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414F3BBD-8F4A-4219-BF2F-FB78B837C998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

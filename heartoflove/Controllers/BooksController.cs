@@ -47,7 +47,7 @@ namespace heartoflove.Controllers
 
                     if (shortname.ToUpper() == data.Chapter.ToUpper())
                     {
-                        list.Add(new DocumentModel(fullname, shortname, "\\Audio\\Books\\HeartOfLove\\" + fullname, "http://www.HeartOfLove.com/Audio/Books/HeartOfLove/" + fullname));
+                        list.Add(new DocumentModel(fullname, shortname, "\\Audio\\Books\\HeartOfLove\\" + fullname, "http://www.HeartOfLove.today/Audio/Books/HeartOfLove/" + fullname));
                         break;
                     }
                 }
