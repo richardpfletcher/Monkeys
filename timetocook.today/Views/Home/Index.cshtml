@@ -58,8 +58,10 @@
                                 string image = winner.picture;
                                 if (image.Length > 0)
                                 {
-                                    string imagePath = "/images/";
-                                    <img src="@imagePath@image" width="600" height="500" alt="" />
+                                    //string imagePath = "/images/";
+                                    string imagePath = "https://whatscookingtreasures.com/images/upload/";
+
+                                    <img src="@imagePath@image" width="600" height="500" alt=""/>
                                 }
                                 else
                                 {
