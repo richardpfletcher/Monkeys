@@ -1,0 +1,231 @@
+﻿@model Stories.Models.Story
+
+@{
+    ViewBag.Title = "UpdateUser";
+}
+
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+
+
+<h2>Update User</h2>
+<div class="col-md-4">
+
+    <table style="width: 55%">
+
+
+
+        <tr>
+            <td>
+                @Html.Label("Reader:")
+            </td>
+
+        </tr>
+        <tr>
+
+            <td>
+
+
+
+                @{
+
+                    @Html.TextBoxFor(model => Model.userName, new { id = "userName" })
+
+                    var userID = ViewData["userID"];
+                    <input type="hidden" id="userID" name="userID" value=@userID />
+
+
+                }
+
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.Label("Email")
+            </td>
+
+        </tr>
+        <tr>
+
+            <td>
+                @{
+
+                    var email = ViewData["email"];
+                    <input type="email" id="email" name="email" maxlength="100" size="50" value="@email" />
+
+
+                }
+            </td>
+        </tr>
+
+
+    </table>
+
+    <table style="width: 55%">
+
+        <tr>
+
+            <td>
+
+                @for (int i = 0; i < Model.MothersHelpersTypeCombo.items.Count; i++)
+                {
+            <tr>
+                <td>
+                    @*@Html.CheckBoxFor(m => Model.MothersHelpersTypeCombo.items[i].Selected)*@
+                    @Html.CheckBoxFor(m => Model.MothersHelpersTypeCombo.items[i].Selected, new { @class = "MothersHelpersTypeCombo" })
+
+
+
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.MothersHelpersTypeCombo.items[i].Text, new { @class = "MothersHelpersTypeCombo" })
+                    @Html.HiddenFor(m => Model.MothersHelpersTypeCombo.items[i].Value, new { @class = "MothersHelpersTypeCombo" })
+                    @Html.HiddenFor(m => Model.MothersHelpersTypeCombo.items[i].Text, new { @class = "MothersHelpersTypeCombo" })
+                </td>
+            </tr>
+
+
+        }
+
+
+            </table>
+
+            <p>
+                <input type="button" id="Update" value="Save" />
+                @{
+                    string id = (string)ViewData["id"];
+                }
+                <input type="hidden" id="id" name="id" value="@id" />
+            </p>
+
+
+
+        </div>
+
+        <div class="col-md-4">
+
+
+        </div>
+
+        <script type="text/javascript">
+
+                    $(function () {
+
+                        $("#Update").click(function () {
+
+
+
+                            var idslist = "";
+                            var counter = 0;
+                            var counter1 = 0;
+                            var motherhelpers = "";
+
+                            $("input:checkbox[class=MothersHelpersTypeCombo]").each(function () {
+
+                                if ($(this).is(":checked")) {
+                                    var userid = $(this).attr("value");
+                                    if (idslist != "") {
+                                        idslist = idslist + ',' + userid;
+
+                                    }
+                                    else
+                                        idslist = userid;
+                                    motherhelpers = $("#MothersHelpersTypeCombo_items_" + counter1 + "__Value").val() + ',' + motherhelpers;
+                                    counter++;
+                                }
+                                counter1++;
+                            });
+
+                            if (counter == 0) {
+                                alert('You must choose an helper type');
+                                return;
+                            }
+
+
+
+
+                            var email = $("#email").val();
+
+                            if (email == "") {
+                                alert('Email is required');
+                                document.getElementById('email').focus();
+                                return;
+                            }
+
+                            var userID = document.getElementById('userID').value;
+                            var userName = $("#userName").val();
+
+                            if (userName == "") {
+                                alert('User Name is required');
+                                document.getElementById('userName').focus();
+                                return;
+                            }
+
+
+                            var env = '@System.Configuration.ConfigurationManager.AppSettings["Enviroment"]';
+
+                            var apiUrl = "";
+
+                            if (env == "Dev") {
+                                //apiUrl = '@System.Configuration.ConfigurationManager.AppSettings["LocalWebApi"]';
+                                apiUrl = "http://localhost:5187/api/Storiesapi/update";
+                            }
+                            else {
+
+                                //apiUrl = '@System.Configuration.ConfigurationManager.AppSettings["ProductionWebApi"]';
+                                apiUrl = "http://api.jataka.fun/api/MothersHelpers/updateRoles";
+
+                            }
+
+                            //var apiUrl = '@System.Configuration.ConfigurationManager.AppSettings["LocalWebApi"]';
+
+
+                            var resultJSON = {
+                                userID: userID, userName: userName, email: email, motherhelpers: motherhelpers,                           };
+
+                            $.ajax({
+                                type: 'POST',
+
+                                //url: apiUrl + "api/MothersHelpers/updateRoles",
+                                url: apiUrl,
+                                //url: "http://localhost:5187/api/Storiesapi/update",
+
+
+                                data: resultJSON,
+                                dataType: "json",
+
+
+                                success: function (data, status, xhr) {
+                                   alertify.success("Mother Helper Roles Saved");
+
+                                },
+                                error: function (xhr, ajaxOptions, thrownError) {
+                                    alert(xhr.status);
+                                    alert(thrownError);
+                                }
+
+
+
+                            });
+
+                            return;
+
+                        });
+
+                        //
+
+                    });
+        </script>
+
+
