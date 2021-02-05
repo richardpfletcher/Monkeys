@@ -29,7 +29,7 @@ namespace Stories.Factory
 
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/AnimalType/");
+                var uri = new Uri("http://api.storyteller.today/api/AnimalType/");
 
                 if (env == "Dev")
                 {
@@ -40,7 +40,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/AnimalType/");
+                    uri = new Uri("http://api.storyteller.today/api/AnimalType/");
 
                 }
 
@@ -96,7 +96,7 @@ namespace Stories.Factory
             {
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/MothersHelpers/getMothersHelpersType/");
+                var uri = new Uri("http://api.storyteller.today/api/MothersHelpers/getMothersHelpersType/");
 
                 if (env == "Dev")
                 {
@@ -107,7 +107,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/MothersHelpers/getMothersHelpersType/");
+                    uri = new Uri("http://api.storyteller.today/api/MothersHelpers/getMothersHelpersType/");
 
 
                 }
@@ -167,7 +167,7 @@ namespace Stories.Factory
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
 
-                var uri = new Uri("http://api.jataka.fun/api/MoralType/");
+                var uri = new Uri("http://api.storyteller.today/api/MoralType/");
 
 
 
@@ -181,7 +181,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/MoralType/");
+                    uri = new Uri("http://api.storyteller.today/api/MoralType/");
 
 
 
@@ -239,7 +239,7 @@ namespace Stories.Factory
 
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/Project/");
+                var uri = new Uri("http://api.storyteller.today/api/Project/");
 
 
                 if (env == "Dev")
@@ -251,7 +251,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/Project/");
+                    uri = new Uri("http://api.storyteller.today/api/Project/");
 
 
                 }
@@ -310,7 +310,7 @@ namespace Stories.Factory
 
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/StorySource/");
+                var uri = new Uri("http://api.storyteller.today/api/StorySource/");
 
 
                 if (env == "Dev")
@@ -322,7 +322,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/StorySource/");
+                    uri = new Uri("http://api.storyteller.today/api/StorySource/");
 
 
                 }
@@ -381,7 +381,7 @@ namespace Stories.Factory
 
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/JakataMaster/");
+                var uri = new Uri("http://api.storyteller.today/api/JakataMaster/");
 
 
                 if (env == "Dev")
@@ -393,7 +393,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/JakataMaster/");
+                    uri = new Uri("http://api.storyteller.today/api/JakataMaster/");
 
 
                 }
@@ -450,7 +450,7 @@ namespace Stories.Factory
             {
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
+                var uri = new Uri("http://api.storyteller.today/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
 
 
                 if (env == "Dev")
@@ -462,7 +462,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
+                    uri = new Uri("http://api.storyteller.today/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
 
 
                 }
@@ -526,7 +526,7 @@ namespace Stories.Factory
             {
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/StoryCategorytName/");
+                var uri = new Uri("http://api.storyteller.today/api/StoryCategorytName/");
 
 
                 if (env == "Dev")
@@ -538,7 +538,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/StoryCategorytName/");
+                    uri = new Uri("http://api.storyteller.today/api/StoryCategorytName/");
 
 
                 }
@@ -599,7 +599,7 @@ namespace Stories.Factory
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
 
-                var uri = new Uri("http://api.jataka.fun/api/SpecificStoryDropdown/");
+                var uri = new Uri("http://api.storyteller.today/api/SpecificStoryDropdown/");
 
 
                 if (env == "Dev")
@@ -613,7 +613,7 @@ namespace Stories.Factory
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
 
-                    uri = new Uri("http://api.jataka.fun/api/SpecificStoryDropdown/");
+                    uri = new Uri("http://api.storyteller.today/api/SpecificStoryDropdown/");
 
 
                 }
@@ -670,7 +670,7 @@ namespace Stories.Factory
             {
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/ToDo/" + status1);
+                var uri = new Uri("http://api.storyteller.today/api/ToDo/" + status1);
 
 
                 if (env == "Dev")
@@ -682,7 +682,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/ToDo/" + status1);
+                    uri = new Uri("http://api.storyteller.today/api/ToDo/" + status1);
 
 
                 }
@@ -741,7 +741,7 @@ namespace Stories.Factory
 
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/Stories/getSpecificStory?ID=" + row + "&Mode=JakataID");
+                var uri = new Uri("http://api.storyteller.today/api/Stories/getSpecificStory?ID=" + row + "&Mode=JakataID");
 
                 if (env == "Dev")
                 {
@@ -751,7 +751,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/Stories/getSpecificStory?ID=" + row + "&Mode=JakataID");
+                    uri = new Uri("http://api.storyteller.today/api/Stories/getSpecificStory?ID=" + row + "&Mode=JakataID");
 
                 }
 
@@ -768,7 +768,7 @@ namespace Stories.Factory
 
                 if (b==true)
                 {
-                    uri = new Uri("http://api.jataka.fun/api/Stories/getSpecificStory?ID=" + row + "&Mode=ID");
+                    uri = new Uri("http://api.storyteller.today/api/Stories/getSpecificStory?ID=" + row + "&Mode=ID");
                     response = client.GetAsync(uri).Result;
                     responseContent = response.Content;
                     responseString = responseContent.ReadAsStringAsync().Result;
@@ -817,7 +817,7 @@ namespace Stories.Factory
 
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/Project/getReaderstory?JakataID=" + JakataID + "&userID=" + userID);
+                var uri = new Uri("http://api.storyteller.today/api/Project/getReaderstory?JakataID=" + JakataID + "&userID=" + userID);
 
 
                 if (env == "Dev")
@@ -829,7 +829,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/Project/getReaderstory?JakataID=" + JakataID + "&userID=" + userID);
+                    uri = new Uri("http://api.storyteller.today/api/Project/getReaderstory?JakataID=" + JakataID + "&userID=" + userID);
 
 
                 }
@@ -896,7 +896,7 @@ namespace Stories.Factory
 
                 var env = ConfigurationManager.AppSettings["Enviroment"];
                 var settings = "";
-                var uri = new Uri("http://api.jataka.fun/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
+                var uri = new Uri("http://api.storyteller.today/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
 
                 if (env == "Dev")
                 {
@@ -906,7 +906,7 @@ namespace Stories.Factory
                 else
                 {
                     settings = ConfigurationManager.AppSettings["ProductionWebApi"];
-                    uri = new Uri("http://api.jataka.fun/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
+                    uri = new Uri("http://api.storyteller.today/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
 
                 }
 

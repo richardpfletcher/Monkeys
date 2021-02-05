@@ -22,7 +22,7 @@ namespace Stories.Factory
             catch
             {
                 //return "Data Source=184.168.194.78;Initial Catalog=rfletcher_evolution;User Id=rfletcher;Password=Barbara_1;";
-                return "Data Source=(LocalDb)\v11.0;Initial Catalog=rfletcher_stories;Integrated Security=True;";
+                return "Data Source=(LocalDb)\v11.0;Initial Catalog=rfletcher_storyteller;Integrated Security=True;";
 
             }
         }
