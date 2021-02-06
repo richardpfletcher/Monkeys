@@ -566,7 +566,7 @@ namespace Stories.Controllers
                         mail.From = new MailAddress("JatakaFun@gmail.com");
                         mail.To.Add(email);
                         mail.Subject = "Thank you for your work";
-                        mail.Body = "<h2>Thanks for uploading your file "+ filename1+" </h2>";
+                        mail.Body = "<h2>Thanks for uploading your file "+ filename1+ " To share in storyteller.today</h2>";
                         mail.IsBodyHtml = true;
                         //mail.Attachments.Add(new Attachment("C:\\file.zip"));
 
