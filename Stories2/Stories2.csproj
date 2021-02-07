@@ -322,7 +322,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>5187</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:5187/</IISUrl>
+          <IISUrl>http://localhost:5199/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

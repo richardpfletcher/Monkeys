@@ -14,7 +14,7 @@ namespace Stories.Controllers
 
     
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    //[EnableCors(origins: "http://localhost:27242", headers: "*", methods: "*")]
+    //[EnableCors(origins: "http://localhost:5199", headers: "*", methods: "*")]
 
     public class StoriesapiController : ApiController
     {

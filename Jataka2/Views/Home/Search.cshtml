@@ -316,7 +316,7 @@
                     if (env == "Dev") {
                         apiUrl = '@System.Configuration.ConfigurationManager.AppSettings["LocalWebApi"]';
                         localStoryUrl = '@System.Configuration.ConfigurationManager.AppSettings["LocalStoryUrl"]';
-                        url = "http://localhost:5187/api/Storiesapi/search";
+                        url = "http://localhost:5199/api/Storiesapi/search";
                     }
                     else {
 
@@ -335,7 +335,7 @@
                         url: url,
 
                         //put back in
-                        //url: "http://localhost:5187/api/Storiesapi/search",
+                        //url: "http://localhost:5199/api/Storiesapi/search",
                         data: resultJSON,
                         dataType: "json",
                         //dataType: "application/json" ,
@@ -349,7 +349,7 @@
                                 return;
                             }
 
-                            //window.location.href = "http://localhost:27242/Home/SearchResults?searchResults=" + data + "&page=1&userIdPost="+userIdPost;
+                            //window.location.href = "http://localhost:5199/Home/SearchResults?searchResults=" + data + "&page=1&userIdPost="+userIdPost;
                             //window.location.href = "http://jataka.fun/Home/SearchResults?searchResults=" + data + "&page=1&userIdPost=" + userIdPost;
                             window.location.href = "/Home/SearchResults?searchResults=" + data + "&page=1&userIdPost=" + userIdPost;
 

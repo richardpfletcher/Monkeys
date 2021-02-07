@@ -85,7 +85,7 @@
 
                             if (env == "Dev") {
 
-                                url = "http://localhost:27242//Home/SearchResults";
+                                url = "http://localhost:5199//Home/SearchResults";
                             }
                             else {
 
@@ -115,7 +115,7 @@
 
                             $.ajax({
                                 type: 'GET',
-                                //url: "http://localhost:27242//Home/SearchResults",
+                                //url: "http://localhost:5199//Home/SearchResults",
                                 //url: "http://jataka.fun//Home/SearchResults",
                                 url: url,
                                 //url: "//Home/SearchResults",
@@ -135,7 +135,7 @@
                                     $("#centerdivResults").empty().append(domElement); // append to end of list
                                     //window.location.reload();
                                     //location.href = location.href;
-                                    //window.location.href = "http://localhost:27242/Home/SearchResults?searchResults=" + data + "&page="+page;
+                                    //window.location.href = "http://localhost:5199/Home/SearchResults?searchResults=" + data + "&page="+page;
 
                                     //$("body").html(response);
                                     console.log(data[0]);
@@ -181,7 +181,7 @@
 
                             //if (env == "Dev") {
 
-                            //    url = "http://localhost:27242//Home/SearchResults";
+                            //    url = "http://localhost:5199//Home/SearchResults";
                             //}
                             //else {
 
@@ -197,7 +197,7 @@
 
                             $.ajax({
                                 type: 'GET',
-                                //url: "http://localhost:27242//Home/SearchResults",
+                                //url: "http://localhost:5199//Home/SearchResults",
                                 //url: "http://jataka.fun//Home/SearchResults",
                                 url:url,
                                 //url: "//Home/SearchResults",

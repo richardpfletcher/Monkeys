@@ -34,7 +34,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/AnimalType/");
+                    uri = new Uri("http://localhost:5199/api/AnimalType/");
                 }
                 else
                 {
@@ -105,7 +105,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
+                    uri = new Uri("http://localhost:5199/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
 
                 }
                 else
@@ -181,7 +181,7 @@ namespace Stories.Factory
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
 
-                     uri = new Uri("http://localhost:5187/api/StoryCategorytName/GetStoryCategoryNameByID?id=" + id);
+                     uri = new Uri("http://localhost:5199/api/StoryCategorytName/GetStoryCategoryNameByID?id=" + id);
 
                 }
                 else
@@ -245,7 +245,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/MoralType/");
+                    uri = new Uri("http://localhost:5199/api/MoralType/");
 
                 }
                 else
@@ -315,7 +315,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/StoryCategorytName/");
+                    uri = new Uri("http://localhost:5199/api/StoryCategorytName/");
 
                 }
                 else
@@ -386,7 +386,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/StorySource/");
+                    uri = new Uri("http://localhost:5199/api/StorySource/");
 
                 }
                 else
@@ -458,7 +458,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/JakataMaster/");
+                    uri = new Uri("http://localhost:5199/api/JakataMaster/");
 
                 }
                 else
@@ -528,7 +528,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/SpecificStoryDropdown/");
+                    uri = new Uri("http://localhost:5199/api/SpecificStoryDropdown/");
 
                 }
                 else
@@ -599,7 +599,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/ToDo/" + status1);
+                    uri = new Uri("http://localhost:5199/api/ToDo/" + status1);
 
                 }
                 else
@@ -668,7 +668,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/Stories/getSpecificStory?ID=" + row + "&Mode=ID");
+                    uri = new Uri("http://localhost:5199/api/Stories/getSpecificStory?ID=" + row + "&Mode=ID");
                 }
                 else
                 {
@@ -756,7 +756,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
+                    uri = new Uri("http://localhost:5199/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
                 }
                 else
                 {

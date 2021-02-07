@@ -34,7 +34,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/AnimalType/");
+                    uri = new Uri("http://localhost:5199/api/AnimalType/");
 
                 }
                 else
@@ -101,7 +101,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/MothersHelpers/getMothersHelpersType/");
+                    uri = new Uri("http://localhost:5199/api/MothersHelpers/getMothersHelpersType/");
 
                 }
                 else
@@ -174,7 +174,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/MoralType/");
+                    uri = new Uri("http://localhost:5199/api/MoralType/");
 
 
                 }
@@ -245,7 +245,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/Project/");
+                    uri = new Uri("http://localhost:5199/api/Project/");
 
                 }
                 else
@@ -316,7 +316,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/StorySource/");
+                    uri = new Uri("http://localhost:5199/api/StorySource/");
 
                 }
                 else
@@ -387,7 +387,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/JakataMaster/");
+                    uri = new Uri("http://localhost:5199/api/JakataMaster/");
 
                 }
                 else
@@ -456,7 +456,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
+                    uri = new Uri("http://localhost:5199/api/MothersHelpers/getMothersHelpersTypeUsers?id=" + id);
 
                 }
                 else
@@ -532,7 +532,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/StoryCategorytName/");
+                    uri = new Uri("http://localhost:5199/api/StoryCategorytName/");
 
                 }
                 else
@@ -606,7 +606,7 @@ namespace Stories.Factory
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
 
-                    uri = new Uri("http://localhost:5187/api/SpecificStoryDropdown/");
+                    uri = new Uri("http://localhost:5199/api/SpecificStoryDropdown/");
 
                 }
                 else
@@ -676,7 +676,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/ToDo/" + status1);
+                    uri = new Uri("http://localhost:5199/api/ToDo/" + status1);
 
                 }
                 else
@@ -746,7 +746,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/Stories/getSpecificStory?ID=" + row + "&Mode=JakataID");
+                    uri = new Uri("http://localhost:5199/api/Stories/getSpecificStory?ID=" + row + "&Mode=JakataID");
                 }
                 else
                 {
@@ -823,7 +823,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/Project/getReaderstory?JakataID=" + JakataID + "&userID=" + userID);
+                    uri = new Uri("http://localhost:5199/api/Project/getReaderstory?JakataID=" + JakataID + "&userID=" + userID);
 
                 }
                 else
@@ -901,7 +901,7 @@ namespace Stories.Factory
                 if (env == "Dev")
                 {
                     settings = ConfigurationManager.AppSettings["LocalWebApi"];
-                    uri = new Uri("http://localhost:5187/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
+                    uri = new Uri("http://localhost:5199/api/YouTube/getYouTube/?ID=" + row + "&UserID=" + userID);
                 }
                 else
                 {
