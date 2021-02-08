@@ -38,7 +38,7 @@
 
 
 
-                <table style="width: 55%">
+                <table style="width: 55%",display: none;>
                     <tr>
                         <td>
                             @Html.Label("Title")
@@ -57,7 +57,7 @@
                 <table style="width: 55%">
                     <tr>
                         <td>
-                            @Html.Label("Story Category")
+                            @Html.Label("Story Category",new { @visible = false })
                         </td>
 
                     </tr>
@@ -269,7 +269,8 @@
                         success: function (data, status, xhr) {
                             //alert("Success: " + xhr.status + " : " + xhr.statusText);
                             alertify.success("Story Saved");
-                            //window.location.href = "/Home/Update?row=" + data.foo;
+                            
+                            //put back in
                             window.location.href = "/Home/Update?row=" + data.dataField;
 
 
@@ -280,15 +281,7 @@
                         }
 
 
-                        //success: function (data) {
-
-                        //    alertify.success("Story Saved");
-                        //    $("#divLoading").hide();
-
-                        //    window.location.href = "/Home/Update?row=" + data.foo;
-
-                        //},
-
+                       
 
                     });
 

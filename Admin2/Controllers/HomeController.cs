@@ -64,10 +64,13 @@ namespace Stories.Controllers
             model = myGetLookups.GeLookupStorySource();
             ViewData["storySourceData"] = model.items;
 
-            model = myGetLookups.GeLookupJakataMaster();
+            //model = myGetLookups.GeLookupJakataMaster();
+            model = myGetLookups.GeLookupJakataMasterFilter();
+
             ViewData["jakataMasterData"] = model.items;
 
             model = myGetLookups.GetStoryCategorytName();
+            
             ViewData["StoryCategorytNameData"] = model.items;
 
 

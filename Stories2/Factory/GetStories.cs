@@ -54,7 +54,7 @@ namespace Stories.Factory
 
 
             p.Add("@JakataID", myStory.JakataID);
-            p.Add("@StoryCategorytName", 1);
+            p.Add("@StoryCategorytName", myStory.StoryCategorytName);
             p.Add("@Title", myStory.Title);
             p.Add("@AnimalType", myStory.AnimalType);
             p.Add("@MoralType", myStory.MoralType);
@@ -1146,6 +1146,54 @@ namespace Stories.Factory
             return response;
         }
 
+        public response GetStoryCategorytNameFilter()
+        {
+
+            var dataTable = new DataTable();
+            dataTable = new DataTable { TableName = "Project" };
+            //var conString1 = ConfigurationManager.ConnectionStrings["LocalEvolution"];
+            //string connString = conString1.ConnectionString;
+            string connString = URLInfo.GetDataBaseConnectionString();
+
+
+            System.IO.StringWriter writer = new System.IO.StringWriter();
+            string returnString = "";
+            response response = new response();
+            response.result = 0;
+            using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(connString))
+            {
+                using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("GetStoryCategorytNameFilter", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    con.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    dataTable.Load(dataReader);
+                    dataTable.WriteXml(writer, XmlWriteMode.WriteSchema, false);
+                    returnString = writer.ToString();
+                    int numberOfRecords = dataTable.Rows.Count;
+                    response.result = numberOfRecords;
+
+
+
+                    StoryCategorytNameList list = new StoryCategorytNameList();
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        storyCategorytName myprod = new storyCategorytName();
+                        myprod.ID = row["ID"].ToString();
+                        myprod.StoryCategorytName = row["StoryCategorytName"].ToString();
+
+
+                        list.storyCategorytNameLists.Add(myprod);
+                    }
+                    response.AddStoryCategorytNameList(list);
+
+                    response.log.Add(numberOfRecords + " Records found");
+
+                }
+            }
+            return response;
+        }
+
         public string ToRomanNumeral(int number)
         {
             var romanNumeral = string.Empty;
@@ -1691,6 +1739,55 @@ namespace Stories.Factory
             using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(connString))
             {
                 using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("GetJakataMaster", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    con.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    dataTable.Load(dataReader);
+                    dataTable.WriteXml(writer, XmlWriteMode.WriteSchema, false);
+                    returnString = writer.ToString();
+                    int numberOfRecords = dataTable.Rows.Count;
+                    response.result = numberOfRecords;
+
+
+
+                    JakataMasterList list = new JakataMasterList();
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        jakataMaster myprod = new jakataMaster();
+                        myprod.ID = row["ID"].ToString();
+                        myprod.Title = row["Title"].ToString();
+
+
+                        list.jakataMasterLists.Add(myprod);
+                    }
+                    response.AddJakataMasterList(list);
+
+                    response.log.Add(numberOfRecords + " Records found");
+
+                }
+            }
+            return response;
+        }
+
+
+        public response GetJakataMasterFilter()
+        {
+
+            var dataTable = new DataTable();
+            dataTable = new DataTable { TableName = "JakataMaster" };
+            //var conString1 = ConfigurationManager.ConnectionStrings["LocalEvolution"];
+            //string connString = conString1.ConnectionString;
+            string connString = URLInfo.GetDataBaseConnectionString();
+
+
+            System.IO.StringWriter writer = new System.IO.StringWriter();
+            string returnString = "";
+            response response = new response();
+            response.result = 0;
+            using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(connString))
+            {
+                using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("GetJakataMasterFilter", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     con.Open();
