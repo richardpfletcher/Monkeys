@@ -194,6 +194,47 @@ namespace Stories.Factory
 
         }
 
+        /// <summary>
+        /// Inserts a new account
+        /// </summary>
+        /// <param name="myStory"></param>
+        /// <returns></returns>
+
+        public int InsertCategoryName(string category)
+        {
+            var p = new DynamicParameters();
+
+            p.Add("@StoryCategorytName", category);
+
+
+
+
+            var conString = ConfigurationManager.ConnectionStrings["LocalStory"];
+            string strConnString = conString.ConnectionString;
+
+            int total = 0;
+
+            using (System.Data.SqlClient.SqlConnection sqlConnection = new System.Data.SqlClient.SqlConnection(strConnString))
+            {
+                sqlConnection.Open();
+                const string storedProcedure = "dbo.InsertStoryCategorytName";
+                var values = sqlConnection.Query<ReceipeTotalModel>(storedProcedure, p, commandType: CommandType.StoredProcedure);
+                foreach (var el in values)
+                {
+                    total = el.totalReceipesInt;
+                }
+            }
+
+            return total;
+
+
+
+
+
+
+        }
+
+
         public int DeleteURL(youTubeModel myStory)
         {
             var p = new DynamicParameters();

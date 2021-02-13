@@ -735,6 +735,24 @@ namespace Stories.Controllers
 
         }
 
+        public ActionResult NewCategory()
+        {
+            //ViewBag.Message = "Your app description page.";
+            //DropdownModel model = new DropdownModel();
+            //GetLookups myGetLookups = new GetLookups();
+            //GetStories myGetStories = new GetStories();
+            //MothersHelpersSpecificList myMothersHelpersSpecificList = new MothersHelpersSpecificList();
+            //myMothersHelpersSpecificList = myGetStories.GetMothersHelpersTypeSpecific(0);
+            //Story myStory = new Story();
+
+            //model = myGetLookups.GetMothersHelpersType();
+            //myStory.MothersHelpersTypeCombo = model;
+
+            return View();
+
+
+        }
+
 
         public ActionResult Animals()
         {
