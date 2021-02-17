@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comix", "comix\comix.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "musiclink", "musiclink\musiclink.csproj", "{9F602A32-CC0A-4C68-BB71-5CFD155E95EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "whatscooking", "whatscooking\whatscooking.csproj", "{7CAE3721-1254-4F95-8DEB-43349BACC811}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "heartoflove", "heartoflove\heartoflove.csproj", "{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guynouriart", "guynouriart\guynouriart.csproj", "{F3F6A9CC-C8C4-4872-AD66-2E3F3DB02D02}"
@@ -35,10 +33,6 @@ Global
 		{9F602A32-CC0A-4C68-BB71-5CFD155E95EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F602A32-CC0A-4C68-BB71-5CFD155E95EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F602A32-CC0A-4C68-BB71-5CFD155E95EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CAE3721-1254-4F95-8DEB-43349BACC811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CAE3721-1254-4F95-8DEB-43349BACC811}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CAE3721-1254-4F95-8DEB-43349BACC811}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CAE3721-1254-4F95-8DEB-43349BACC811}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FB6084E-22AD-4980-9E0A-40C31A5B7EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
