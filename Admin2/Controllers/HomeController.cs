@@ -280,10 +280,10 @@ namespace Stories.Controllers
             GetLookups myGetLookups = new GetLookups();
 
             model = myGetLookups.GeLookupSpecificStoryDropdown();
-            ViewData["jakataMasterData"] = model.items;
+            //ViewData["jakataMasterData"] = model.items;
 
-            
 
+            DropdownModel model1 = new DropdownModel();
             model = myGetLookups.GeLookupCatUsers(2);
             model.items.Add(new SelectListItem { Text = "Please Select ", Value = "0" });
 
@@ -293,6 +293,16 @@ namespace Stories.Controllers
 
             DropdownModel modelExisting = new DropdownModel();
             ViewData["existingReaderData"] = modelExisting.items;
+
+
+            //model = myGetLookups.GeLookupSpecificStoryDropdown();
+            //ViewData["jakataMasterData"] = model.items;
+            ViewData["jakataMasterData"] = model1.items;
+
+            model = myGetLookups.GetStoryCategorytName();
+
+            ViewData["StoryCategorytNameData"] = model.items;
+
 
 
 
