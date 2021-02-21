@@ -303,6 +303,15 @@ namespace Stories.Controllers
 
             ViewData["StoryCategorytNameData"] = model.items;
 
+            //var message = "";
+            //ViewData["Message"] = message;
+        
+            //if (model.items.Count>0)
+            //{
+            //    ViewData["Message"] = "No Records to input";
+            //}
+
+            
 
 
 

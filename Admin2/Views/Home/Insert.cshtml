@@ -36,9 +36,28 @@
 
             <div>
 
+                
+
+                <table style="width: 55%">
+                    <tr>
+                        <td>
+                            @Html.Label("Story Category", new { @visible = false })
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>
+                            @Html.DropDownList("StoryCategorytName", (IEnumerable<SelectListItem>)ViewData["StoryCategorytNameData"])
+                        </td>
+
+                    </tr>
 
 
-                <table style="width: 55%",display: none;>
+                </table>
+
+
+                <table style="width: 55%" ,display: none;>
                     <tr>
                         <td>
                             @Html.Label("Title")
@@ -54,23 +73,6 @@
                     </tr>
                 </table>
 
-                <table style="width: 55%">
-                    <tr>
-                        <td>
-                            @Html.Label("Story Category",new { @visible = false })
-                        </td>
-
-                    </tr>
-                    <tr>
-
-                        <td>
-                            @Html.DropDownList("StoryCategorytName", (IEnumerable<SelectListItem>)ViewData["StoryCategorytNameData"])
-                        </td>
-
-                    </tr>
-
-
-                </table>
 
 
                 <table style="width: 55%">
